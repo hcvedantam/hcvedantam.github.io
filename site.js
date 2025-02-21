@@ -168,10 +168,10 @@ document.head.appendChild(style);
 
 let currentMonth = new Date();
 
-// Function to calculate days until June 1
-function daysUntilJune1() {
+// Function to calculate days until March 27
+function daysUntilMarch27() {
   const now = new Date();
-  const target = new Date(now.getFullYear(), 5, 1); // June 1
+  const target = new Date(now.getFullYear(), 2, 27); // March 27
   if (now > target) {
     target.setFullYear(target.getFullYear() + 1);
   }
@@ -313,7 +313,7 @@ function createElements() {
     if (!e.target.closest('.nav-button')) {
       envelope.classList.toggle('open');
       if (envelope.classList.contains('open')) {
-        countdown.textContent = `${daysUntilJune1()} Days Until June 1`;
+        countdown.textContent = `${daysUntilMarch27()} Days Until March 27`;
       }
     }
   });
